@@ -1,0 +1,17 @@
+h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
+  color: #fff;
+  cursor: pointer;
+  margin-top: 100px;
+  padding: 20px;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  transition: border 200ms linear;
+}
+
+h1:hover {
+  border-color: #38ff38;
+}

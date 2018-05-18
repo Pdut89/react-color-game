@@ -1,0 +1,51 @@
+.card-container > div {
+  transition: opacity 200ms linear;
+  border-radius: 2px;
+}
+
+.locked {
+  background-color: black !important;
+  cursor: pointer;
+}
+
+.temp {
+  pointer-events: none;
+}
+
+.solved {
+  pointer-events: none;
+  opacity: 0;
+  animation: spin 0.3s linear;
+}
+
+.visible {
+  animation: flicker 1s ease-in-out infinite;
+  cursor: pointer;
+}
+
+@keyframes flicker {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.95);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+  50% {
+    transform: rotate(90deg);
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(90deg);
+    opacity: 0;
+  }
+}
