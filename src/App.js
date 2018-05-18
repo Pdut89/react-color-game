@@ -5,7 +5,8 @@ import NewButton from './NewButton';
 import './App.css';
 
 
-let getColorArray = () => {
+// Returns array of color objects to set the state with
+const getColorArray = () => {
   let prevColor
   let colorBoxes = Array(16).fill().map((item, index) => {
     let color = prevColor
@@ -26,7 +27,6 @@ let getColorArray = () => {
 
 class App extends Component {
 
-  /// Constructor
   constructor(props) {
     super(props);
 
@@ -39,15 +39,13 @@ class App extends Component {
     this.startNewGame = this.startNewGame.bind(this)
   };
 
+  // Resets the state to default
   startNewGame(e) {
     let colorBoxes = getColorArray()
-    console.log(colorBoxes)
-    console.log({colorBoxes})
-
     this.setState({colorBoxes})
   }
 
-  /// Click handler
+  // Handles click on box
   updateBoxState = (e) => {
 
     let currentSelection
